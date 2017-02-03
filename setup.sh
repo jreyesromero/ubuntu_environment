@@ -10,6 +10,16 @@ echo "UPDATING UBUNTU REPOSITORIES"
 echo "INSTALLING GIT"
 sudo apt-get install git
 
+echo "INSTALLING JAVA 8"
+sudo apt-add-repository ppa:webupd8team/java
+
+sudo apt-get update
+
+sudo apt-get install oracle-java8-installer
+
+echo "INSTALLING MAVEN"
+sudo apt-get maven
+
 echo "INSTALLING CURL"
 # Lets install curl (if commented is because it is already installed)
 sudo apt-get install curl \
@@ -52,3 +62,27 @@ echo "INSTALLING DOCKER COMPOSE"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
+
+# INSTALL DEPENDENCIES FOR JHIPSTER
+echo "Installing NodeJS"
+curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
+sudo apt-get install -y nodejs
+
+# 1. Install Yeoman: 
+echo "Installing Yeoman"
+sudo npm install -g yo
+
+# 2. Install Bower: 
+echo "Installing Bower"
+sudo npm install -g bower
+
+# 3. Install Gulp: 
+echo "Installing Gulp"
+sudo npm install -g gulp-cli
+
+# 4. Install JHipster: 
+echo "Installing JHipster"
+sudo npm install -g generator-jhipster
+
+
+
