@@ -4,18 +4,18 @@
 # commands from: https://docs.docker.com/engine/installation/linux/ubuntu/
 
 echo "UPDATING UBUNTU REPOSITORIES"
- update repositories
- sudo apt-get update
+update repositories
+sudo apt-get update
 
 echo "INSTALLING GIT"
-sudo apt-get install git
+#sudo apt-get install git
 
 echo "INSTALLING JAVA 8"
 sudo apt-add-repository ppa:webupd8team/java
 
 sudo apt-get update
 
-sudo apt-get install oracle-java8-installer
+sudo apt-get install -y oracle-java8-installer
 
 echo "INSTALLING MAVEN"
 sudo apt-get maven
