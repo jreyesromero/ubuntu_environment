@@ -1,10 +1,9 @@
 # ubuntu_environment
-All the scripts that I need when running an ubuntu VM
 
-Added an script to install docker-machine into ubuntu VM
-   We have already included the necessary dependencies for installing docker-machine: 
-	- Having CURL already installed. 
-		If not, just uncomment the lines which contains the commands for the installation of CURL
+Are you reading the great work done as final project for EADS, being the author: jreyesromero?
+Are you wondering what are the main configuration of his ubuntu development environment?
+If your answer for some of those questions is YES!, you are in the right place.
 
-	- Having Docker binary already installed.
-		If not, just uncomment the lines which contains the commands for the installation of Docker Binary.
+This repository brings you the opportunity of clone and execute the next scripts:
+
+
