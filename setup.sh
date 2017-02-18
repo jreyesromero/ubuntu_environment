@@ -1,3 +1,4 @@
+#!/bin/bash
 # This script will install all the necessary programs that will 
 # be used during the project work of EADS.
 
@@ -18,24 +19,24 @@ sudo apt-get update
 sudo apt-get install -y oracle-java8-installer
 
 echo "INSTALLING MAVEN"
-sudo apt-get maven
+sudo apt-get install -y maven
 
 echo "INSTALLING CURL"
 # Lets install curl (if commented is because it is already installed)
-sudo apt-get install curl \
+sudo apt-get install -y curl \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
 
 
 echo "ADDING DOCKER REPOSITORIES"
-sudo apt-get install apt-transport-https \
+sudo apt-get install -y apt-transport-https \
                        ca-certificates
 
 curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
 
 apt-key fingerprint 58118E89F3A912897C070ADBF76221572C52609D
 
-sudo apt-get install software-properties-common
+sudo apt-get install -y software-properties-common
 
 sudo add-apt-repository \
       "deb https://apt.dockerproject.org/repo/ \
