@@ -5,18 +5,21 @@
 # commands from: https://docs.docker.com/engine/installation/linux/ubuntu/
 
 echo "UPDATING UBUNTU REPOSITORIES"
-update repositories
-sudo apt-get update
+#update repositories
+#sudo apt-get update
 
 echo "INSTALLING GIT"
 #sudo apt-get install git
 
 echo "INSTALLING JAVA 8"
-sudo apt-add-repository ppa:webupd8team/java
+#sudo apt-add-repository ppa:webupd8team/java
 
-sudo apt-get update
+#sudo apt-get update
+#sudo curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.rpm > jdk-8u112-linux-x64.rpm
 
-sudo apt-get install -y oracle-java8-installer
+#sudo rpm -ivh jdk-8u112-linux-x64.rpm
+
+#sudo apt-get install -y oracle-java8-installer
 
 echo "INSTALLING MAVEN"
 sudo apt-get install -y maven
@@ -63,6 +66,16 @@ echo "INSTALLING DOCKER COMPOSE"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
+
+# INSTALL Docker Machine steps
+echo "INSTALLING DOCKER MACHINE"
+sudo curl -L https://github.com/docker/machine/releases/download/v0.9.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+  chmod +x /tmp/docker-machine &&
+  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+# UPGRADE DOCKER
+echo "UPGRADING DOCKER"
+sudo apt-get upgrade docker-engine
 
 # INSTALL DEPENDENCIES FOR JHIPSTER
 echo "Installing NodeJS"
