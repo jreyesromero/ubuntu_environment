@@ -5,21 +5,25 @@
 # commands from: https://docs.docker.com/engine/installation/linux/ubuntu/
 
 echo "UPDATING UBUNTU REPOSITORIES"
-#update repositories
-#sudo apt-get update
+update repositories
+sudo apt-get update
 
+# Install and configure git
 echo "INSTALLING GIT"
-#sudo apt-get install git
+sudo apt-get install git
+git config --global user.email "julian.reyes.romero@gmail.com"
+git config --global user.name "Julian Reyes Romero"
+
 
 echo "INSTALLING JAVA 8"
-#sudo apt-add-repository ppa:webupd8team/java
+sudo apt-add-repository ppa:webupd8team/java
 
-#sudo apt-get update
-#sudo curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.rpm > jdk-8u112-linux-x64.rpm
+sudo apt-get update
+sudo curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.rpm > jdk-8u112-linux-x64.rpm
 
-#sudo rpm -ivh jdk-8u112-linux-x64.rpm
+sudo rpm -ivh jdk-8u112-linux-x64.rpm
 
-#sudo apt-get install -y oracle-java8-installer
+sudo apt-get install -y oracle-java8-installer
 
 echo "INSTALLING MAVEN"
 sudo apt-get install -y maven
